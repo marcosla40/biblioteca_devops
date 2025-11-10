@@ -12,8 +12,11 @@ import java.util.Optional;
 @RequestMapping(path = "/api")
 public class LibroController {
 
-    @Autowired
-    private LibroServiceImpl libroServiceImpl; //Se inyecta dependencia
+    private final LibroServiceImpl libroServiceImpl; //Se inyecta dependencia
+
+    public LibroController(LibroServiceImpl libroServiceImpl) {
+        this.libroServiceImpl = libroServiceImpl;
+    }
 
     @GetMapping
     public List<Libro> obtenerTodos() {
