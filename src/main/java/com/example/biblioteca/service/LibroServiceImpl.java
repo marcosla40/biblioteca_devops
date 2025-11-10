@@ -2,7 +2,6 @@ package com.example.biblioteca.service;
 
 import com.example.biblioteca.entity.Libro;
 import com.example.biblioteca.repository.LibroRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
