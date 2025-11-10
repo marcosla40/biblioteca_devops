@@ -2,6 +2,7 @@ package com.example.biblioteca.service;
 
 import com.example.biblioteca.entity.Libro;
 import com.example.biblioteca.repository.LibroRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +11,11 @@ import java.util.Optional;
 @Service
 public class LibroServiceImpl implements LibroService {
 
-    private LibroRepository libroRepository;
+    private final LibroRepository libroRepository;
+
+    public LibroServiceImpl(LibroRepository libroRepository) {
+        this.libroRepository = libroRepository;
+    }
 
     @Override
     public List<Libro> getLibros() {
