@@ -5,6 +5,7 @@ import lombok.*;
 
 @Data // Evita definir los getters y setters
 @Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "libro")
